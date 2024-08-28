@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://world/sky.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Node2D" groups=[
+"SaveFiles",
+]]
+script = ExtResource( 1 )
+
+[node name="sky" parent="." instance=ExtResource( 2 )]
+
+[node name="BackgroundTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="WaitTimer" type="Timer" parent="."]
+wait_time = 18.0
+one_shot = true
+
+[connection signal="timeout" from="BackgroundTimer" to="." method="_on_BackgroundTimer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_WaitTimer_timeout"]

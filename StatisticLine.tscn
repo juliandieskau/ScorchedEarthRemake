@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+
+font_path = "res://Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 25
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[node name="StatisticLine" type="Container"]
+margin_right = 980.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="."]
+margin_left = 40.0
+margin_right = 200.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "Nagasaki"
+align = 1
+valign = 1
+
+[node name="Wins" type="Label" parent="."]
+margin_left = 230.0
+margin_right = 355.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="Kills" type="Label" parent="."]
+margin_left = 355.0
+margin_right = 480.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "20"
+align = 1
+valign = 1
+
+[node name="Deaths" type="Label" parent="."]
+margin_left = 480.0
+margin_right = 605.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="Hits" type="Label" parent="."]
+margin_left = 615.0
+margin_right = 740.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "42"
+align = 1
+valign = 1
+
+[node name="Money" type="Label" parent="."]
+margin_left = 785.0
+margin_right = 935.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "12000 $"
+align = 1
+valign = 1
+
