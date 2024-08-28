@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tank/singleBullet.gd" type="Script" id=1]
+[ext_resource path="res://ammunition/atomBullet.png" type="Texture" id=2]
+[ext_resource path="res://audio/rocketflame1.wav" type="AudioStream" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+radius = 8.94877
+
+[node name="atomBullet" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="texture" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -20.0
+pitch_scale = 0.6
+autoplay = true
+

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ammunition/tracer_texture.png" type="Texture" id=1]
+
+[node name="tracer" type="Line2D"]
+points = PoolVector2Array( 882.202, 261.402, 0, 0, 1040.85, 185.401 )
+width = 1.0
+default_color = Color( 0.615686, 0.615686, 0.615686, 1 )
+texture = ExtResource( 1 )
+texture_mode = 1
+

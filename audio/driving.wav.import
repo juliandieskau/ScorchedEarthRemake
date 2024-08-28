@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/driving.wav-88c5e5979bf4f1d8ae32409c95e9b3b4.sample"
+
+[deps]
+
+source_file="res://audio/driving.wav"
+dest_files=[ "res://.import/driving.wav-88c5e5979bf4f1d8ae32409c95e9b3b4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

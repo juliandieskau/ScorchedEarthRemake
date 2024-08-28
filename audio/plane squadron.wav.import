@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/plane squadron.wav-aca782517aadd758263e9301cb2a7eac.sample"
+
+[deps]
+
+source_file="res://audio/plane squadron.wav"
+dest_files=[ "res://.import/plane squadron.wav-aca782517aadd758263e9301cb2a7eac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
