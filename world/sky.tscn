@@ -11,4 +11,3 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="Stars" parent="." instance=ExtResource( 2 )]
-

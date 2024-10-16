@@ -583,8 +583,10 @@ func frenchBullet():
 
 func japan():
 	var whiteFlag = preload("res://ammunition/whiteFlag.tscn").instance()
-	whiteFlag.position = get_node(get_node("/root/global").player_hit).position 
-	add_child(whiteFlag)
+	var playerHit = get_node("/root/global").player_hit
+	if playerHit != "":
+		whiteFlag.position = get_node(playerHit).position 
+		add_child(whiteFlag)
 	pass
 
 func spawn_air_strike(type):
@@ -653,9 +655,9 @@ func play_background_audio():
 func give_money():
 	for i in player_amount:
 		var money_add = 0
-		money_add += 3000 * round_stats[i][1] # for wins
-		money_add += 1000 * round_stats[i][2] # for kills
-		money_add += 100 * round_stats[i][4] # for hits
+		money_add += 5000 * round_stats[i][1] # for wins
+		money_add += 5000 * round_stats[i][2] # for kills
+		money_add += 1000 * round_stats[i][4] # for hits
 		round_stats[i][5] = money_add
 		var points_add = 0 #this isn't shown for players, just used for sorting after every round
 		points_add += round_stats[i][4] # for hits (max 999)

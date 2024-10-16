@@ -77,19 +77,19 @@ func save_game():
 	var nodes_to_save = get_tree().get_nodes_in_group("SaveFiles")
 	print("Nodes to save: ", nodes_to_save)
 	
+	# Create a file
+	save_file.open(SAVE_PATH, File.WRITE)
+	
 	for node in nodes_to_save:
 		var node_data = node.call("save")
-		save_file.store_line(to_json(node_data))
+		#save_file.store_line(to_json(node_data))
 		save_dict[node.get_path()] = node.save()
 		print(node.get_path())
 		print(save_dict)
 		pass
 	
-	# Create a file
-	save_file.open(SAVE_PATH, File.WRITE)
-	
 	# Serialize the data dictionary to JSON
-	save_file.store_line(to_json((save_dict)))
+	save_file.store_string(to_json((save_dict)))
 	
 	# Write the JSON to the file and save to disk
 	save_file.close()
